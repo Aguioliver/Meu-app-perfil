@@ -8,6 +8,19 @@ const inputs = document.querySelectorAll(".form-box input");
 btn.addEventListener("click", analisarPerfil);
 
 function analisarPerfil() {
+    // Se o resultado já estiver visível, o clique significa "resetar"
+    if (!resultadoDiv.classList.contains("hidden")) {
+        // Limpa todos os campos de input
+        inputs.forEach(input => {
+            input.value = "";
+        });
+
+        resultadoDiv.classList.add("hidden"); // Esconde o resultado
+        formBox.classList.remove("hidden"); // Mostra o formulário novamente
+        btn.innerText = "Descobrir Meu Perfil"; // Restaura o texto do botão
+        return; // Para a execução da função aqui
+    }
+
     const respostasArray = [];
     let todosPreenchidos = true;
 

@@ -88,3 +88,10 @@ button:hover {
     border-radius: 10px;
     border: 1px solid #e94560;
 }
+
+#texto-perfil {
+    white-space: pre-wrap; /* Respeita as quebras de linha (\n) do JavaScript */
+    word-wrap: break-word; /* Quebra palavras longas para não estourarem a caixa */
+    text-align: left;      /* Alinha o texto do perfil à esquerda para melhor leitura */
+}
+}
