@@ -1,0 +1,90 @@
+/* 1. Configuramos o vídeo para ficar fixo no fundo */
+.video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir a tela sem deformar */
+    z-index: -2; /* Joga o vídeo para a camada "subsolo 2" */
+}
+
+/* 2. Criamos uma película escura por cima do vídeo */
+/* Isso ajuda a destacar a caixa de perguntas */
+.mascara-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Preto com 50% de transparência */
+    z-index: -1; /* Joga para a camada "subsolo 1" (em cima do vídeo) */
+}
+
+/* 3. Ajuste no BODY (Limpa o background antigo) */
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #16213e;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    max-width: 400px;
+    width: 90%; /* Garante que o container não cole nas bordas em telas pequenas */
+    text-align: center;
+}
+
+.form-box label {
+    display: block; /* Faz a pergunta ocupar uma linha inteira */
+    text-align: left; /* Alinha o texto da pergunta à esquerda */
+    margin-top: 20px; /* Adiciona espaço acima de cada nova pergunta */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px; /* Adiciona um pequeno espaço entre a pergunta e a caixa */
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+button {
+    background-color: #e94560;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 30px; /* Adiciona espaço acima do botão */
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff2e63;
+}
+
+.hidden {
+    display: none;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #0f3460;
+    border-radius: 10px;
+    border: 1px solid #e94560;
+}

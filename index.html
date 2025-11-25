@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra sua Personalidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- VÍDEO DE FUNDO -->
+    <video autoplay muted loop playsinline webkit-playsinline class="video-fundo">
+        <source src="https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_30fps.mp4" type="video/mp4">
+    </video>
+    <!-- MÁSCARA ESCURA (Opcional, para o texto não sumir se o vídeo for claro) -->
+    <div class="mascara-video"></div>
+    <!-- AQUI COMEÇA SEU CONTEÚDO NORMAL -->
+    <div class="container">
+        <h1>Quem é você de verdade? 🧠</h1>
+        <p>Responda e a 7Q traçará seu perfil.</p>
+
+        <div class="form-box">
+            <label for="p1">1. Qual o seu destino de cruzeiro dos sonhos?</label>
+            <input type="text" id="p1" placeholder="Ex: Caribe, Alasca, Mediterrâneo...">
+
+            <label for="p2">2. O que você mais gosta em um dia no mar?</label>
+            <input type="text" id="p2" placeholder="Ex: Relaxar na piscina, shows, spa...">
+
+            <label for="p3">3. Qual tipo de excursão em terra você prefere?</label>
+            <input type="text" id="p3" placeholder="Ex: Aventura, cultura, praia...">
+
+            <label for="p4">4. Qual prato você mais espera provar a bordo?</label>
+            <input type="text" id="p4" placeholder="Ex: Frutos do mar, massas, sobremesas...">
+
+            <label for="p5">5. Qual a primeira coisa que você faz ao embarcar?</label>
+            <input type="text" id="p5" placeholder="Ex: Explorar o navio, ir para o buffet...">
+
+            <label for="p6">6. Qual show ou atividade a bordo você não perderia?</label>
+            <input type="text" id="p6" placeholder="Ex: Teatro, cassino, festa na piscina...">
+
+            <label for="p7">7. Qual restaurante temático você escolheria para um jantar especial?</label>
+            <input type="text" id="p7" placeholder="Ex: Italiano, asiático, churrascaria...">
+
+            <button id="analisar-btn">Descobrir Meu Perfil</button>
+        </div>
+
+        <div id="resultado" class="hidden">
+            <h3>Seu Perfil:</h3>
+            <p id="texto-perfil">...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
